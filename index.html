@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>슝책마켓 - 숭실대 전공책 중고거래</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="header"></div>
+
+  <main class="container main">
+    <section class="hero">
+      <div class="hero-banner">
+        <div class="hero-text">
+          <p class="hero-label">숭실대 전공책 중고거래</p>
+          <h1 class="hero-title">필요한 전공책을<br />학과별로 찾아보세요</h1>
+        </div>
+        <img class="hero-mascot" src="assets/images/mascot.svg" alt="슝책마켓 마스코트" />
+      </div>
+
+      <div class="quick-menu">
+        <h2 class="quick-title">바로가기</h2>
+        <ul class="quick-list">
+          <li><a href="pages/search.html"><img src="assets/images/ic_find_book.svg" alt="" />전공책 찾기</a></li>
+          <li><a href="pages/chat.html"><img src="assets/images/ic_my_chat.svg" alt="" />내 채팅</a></li>
+          <li><a href="pages/sell.html"><img src="assets/images/ic_sell_book.svg" alt="" />책 판매하기</a></li>
+          <li><a href="pages/my-listings.html"><img src="assets/images/ic_my_page.svg" alt="" />내 판매글</a></li>
+        </ul>
+      </div>
+    </section>
+    
+    <section class="category">
+        <div class="chips">
+            <button class="chip active" data-college="전체">전체</button>
+            <button class="chip" data-college="AI대학">AI대학</button>
+            <button class="chip" data-college="IT대학">IT대학</button>
+            <button class="chip" data-college="인문대학">인문대학</button>
+            <button class="chip" data-college="경영대학">경영대학</button>
+            <button class="chip" data-college="자연과학대학">자연과학대학</button>
+            <button class="chip" data-college="공과대학">공과대학</button>
+
+            <!--더보기-->
+            <button class="chip extra" data-college="법과대학" hidden>법과대학</button>
+            <button class="chip extra" data-college="사회과학대학" hidden>사회과학대학</button>
+            <button class="chip extra" data-college="경제통상대학" hidden>경제통상대학</button>
+            <button class="chip extra" data-college="자유전공학부" hidden>자유전공학부</button>
+            <button class="chip extra" data-college="교양" hidden>교양</button>
+        </div>
+        <button class="more-btn" id="moreBtn">학과 더보기 <span class="arrow">⌄</span></button>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <h2 class="section-title">지금 올라온 전공책</h2>
+        <div class="section-tools">
+          <label class="toggle">
+            <span>거래완료 포함</span>
+            <input type="checkbox" id="includeDone" checked />
+            <span class="slider"></span>
+          </label>
+          <select id="sortSelect" class="sort-select">
+            <option value="latest">최신순</option>
+            <option value="low">낮은 가격순</option>
+            <option value="high">높은 가격순</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="book-grid"></div>
+      <p class="empty-msg" hidden>조건에 맞는 전공책이 없어요.</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
